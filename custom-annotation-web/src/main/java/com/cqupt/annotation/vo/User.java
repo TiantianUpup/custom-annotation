@@ -20,6 +20,6 @@ public class User {
     /**
      * 性别 man or women
      * */
-    @Check
+    @Check(paramValues = {"man", "woman"})
     private String sex;
 }

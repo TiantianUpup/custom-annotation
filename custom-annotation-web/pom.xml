@@ -37,6 +37,12 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!--hibernate validator-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.cqupt.annotation</groupId>
 			<artifactId>custom-annotation-demo1</artifactId>

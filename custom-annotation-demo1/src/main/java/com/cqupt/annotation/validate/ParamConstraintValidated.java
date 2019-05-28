@@ -15,16 +15,19 @@ import java.util.List;
  * @Version: 1.0
  */
 public class ParamConstraintValidated implements ConstraintValidator<Check, Object> {
-    //先写死，可以从properties文件中读取
-    private List<String> validateParam = Arrays.asList("man", "woman");
+    /**
+     * 合法的参数值，从注解中获取
+     * */
+    private List<String> paramValues;
+
     @Override
     public void initialize(Check constraintAnnotation) {
-
+        //初始化时获取注解上的值
+        paramValues = Arrays.asList(constraintAnnotation.paramValues());
     }
 
-    @Override
     public boolean isValid(Object o, ConstraintValidatorContext constraintValidatorContext) {
-        if (validateParam.contains(o)) {
+        if (paramValues.contains(o)) {
             return true;
         }
 
