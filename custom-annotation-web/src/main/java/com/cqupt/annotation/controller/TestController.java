@@ -1,5 +1,6 @@
 package com.cqupt.annotation.controller;
 
+import com.cqupt.annotation.CustomCache;
 import com.cqupt.annotation.PermissionCheck;
 import com.cqupt.annotation.vo.User;
 import org.springframework.validation.annotation.Validated;
@@ -17,16 +18,23 @@ import javax.validation.Valid;
  * @Date:2019/5/27 21:36 
  * @Version: 1.0
  */
-@RestController("/api/test")
+@RestController
 public class TestController {
-    @PostMapping
+    @PostMapping("/api/test")
     public Object test(@Validated @RequestBody User user) {
         return "hello world";
     }
 
-    @GetMapping
+    @GetMapping("/api/test")
     @PermissionCheck(resourceKey = "test")
     public Object testPermissionCheck() {
         return "hello world";
     }
+
+    @GetMapping("/api/cache")
+    @CustomCache(key = "test")
+    public Object testCustomCache() {
+        return "don't hit cache";
+    }
+
 }
