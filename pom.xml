@@ -6,7 +6,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>custom-annotation-demo1</module>
-
+		<module>custom-annotation-demo2</module>
+		<module>custom-annotation-demo3</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
