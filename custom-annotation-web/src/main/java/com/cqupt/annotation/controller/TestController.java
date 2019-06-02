@@ -1,7 +1,9 @@
 package com.cqupt.annotation.controller;
 
+import com.cqupt.annotation.PermissionCheck;
 import com.cqupt.annotation.vo.User;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +21,12 @@ import javax.validation.Valid;
 public class TestController {
     @PostMapping
     public Object test(@Validated @RequestBody User user) {
+        return "hello world";
+    }
+
+    @GetMapping
+    @PermissionCheck(resourceKey = "test")
+    public Object testPermissionCheck() {
         return "hello world";
     }
 }

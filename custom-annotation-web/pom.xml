@@ -47,6 +47,16 @@
 			<groupId>com.cqupt.annotation</groupId>
 			<artifactId>custom-annotation-demo1</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.cqupt.annotation</groupId>
+			<artifactId>custom-annotation-demo2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cqupt.annotation</groupId>
+			<artifactId>custom-annotation-demo3</artifactId>
+		</dependency>
 	</dependencies>
 
 	<!--<build>-->
