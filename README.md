@@ -21,9 +21,9 @@ public Object test(@Validated @RequestBody User user) {
 ```
 - Postman模拟请求测试
 不符合校验：
-![符合校验规则](https://upload-images.jianshu.io/upload_images/9358011-723b974bb431fd6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![符合校验规则](https://upload-images.jianshu.io/upload_images/9358011-723b974bb431fd6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 
-  符合校验规则：
+符合校验规则：
 ![符合校验规则](https://upload-images.jianshu.io/upload_images/9358011-22561c4605a2a650.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 权限注解测试
@@ -36,7 +36,8 @@ public Object testPermissionCheck() {
 }
 ```
 - Postman模拟请求测试
-![权限校验通过](https://upload-images.jianshu.io/upload_images/9358011-8010cc7edc4370b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![权限校验通过](https://upload-images.jianshu.io/upload_images/9358011-8010cc7edc4370b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+
 将`@PermissionCheck(resourceKey = "test")`替换为`@PermissionCheck(resourceKey = "testKey")`
 ![权限校验不通过](https://upload-images.jianshu.io/upload_images/9358011-7aa0d0da5be9925f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -50,10 +51,13 @@ public Object testCustomCache() {
 }
 ```
 - Postman模拟请求测试
-![不命中缓存](https://upload-images.jianshu.io/upload_images/9358011-cf27537cf51b99f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![不命中缓存](https://upload-images.jianshu.io/upload_images/9358011-cf27537cf51b99f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+
 将`@CustomCache(key = "test")`替换为`@CustomCache(key = "testKey")`
 ![命中缓存](https://upload-images.jianshu.io/upload_images/9358011-a04b1cf1ed6bcd30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+<br/>
+<br/>
+<br/>
 了解更多：[]()
 
 
